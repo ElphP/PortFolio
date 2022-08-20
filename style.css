@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+.fenetre {
+    width: 75%;
+    height: 100vh;
+    margin: auto;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    box-shadow: 0px 0px 70px black;
+    background-color: black;
+}
+
+/* barre de navigation */
+nav {
+    background-color: #153061;
+}
+
+nav > ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    margin-left: 30px;
+    margin-right: 50px;
+    align-items: center;
+    padding-top: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav .nom {
+    font-weight: bold;
+    font-size: 1.8rem;
+    flex-basis: auto;
+    font-family: "Oxygen";
+}
+
+nav > ul > li:nth-child(2),
+nav > ul > li:nth-child(3),
+nav > ul > li:nth-child(4) {
+    padding-left: 40px;
+    font-size: 1.2rem;
+}
+
+nav > ul > li:nth-child(4) {
+    flex-grow: 1;
+    padding-right: 40px;
+}
+
+nav > ul > li:nth-child(5) {
+    flex-basis: 70px;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 8px 12px 4px 12px;
+    margin: 5px;
+    background-color: #e2e1c6;
+    border-radius: 15px;
+}
+
+.btnCV {
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+nav > ul > li:nth-child(5):hover {
+    box-shadow: 0px 0px 45px rgb(226, 102, 102);
+}
+
+h1 {
+    font-weight: bold;
+    color: white;
+    font-family: "Oxygen";
+    text-align: center;
+    padding-top: 20px;
+}
+/* section a propos de moi */
+
+section.aboutme {
+    background-color: #8eb2f6;
+    margin: 30px auto auto 50px;
+    padding: 20px 60px 20px 60px;
+    border-radius: 3px;
+    width: 40%;
+    min-width: 440px;
+}
+
+.animation {
+    font-family: monospace;
+    font-size: 1.5rem;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.aboutme li {
+    list-style-type: none;
+    padding-left: 7px;
+    letter-spacing: 1px;
+}
+
+.aboutme li:nth-child(1) {
+    color: blue;
+}
+
+.aboutme li:nth-child(2) {
+    color: rgb(203, 15, 15);
+    text-shadow: 0 0 1px black;
+}
+
+.secondRow {
+    display: flex;
+}
+
+.aboutme h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.aboutme p {
+    font-size: 1rem;
+    font-family: "Times New Roman", Times, serif;
+    font-style: normal;
+}
+
+#animText1,
+#animText2 {
+    position: relative;
+    width: max-content;
+    color: #153061;
+}
+
+#animText1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#animText1::after {
+    border-left: 0.125rem solid black;
+    height: 100%;
+    animation: clign 0.9s 6;
+    opacity: 0;
+}
+
+#animText3 {
+    padding-left: 10px;
+    color: blue;
+}
+
+@keyframes clign {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
