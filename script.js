@@ -204,3 +204,8 @@ function ToggleMenu() {
     });
 }
 ToggleMenu();
+
+function changeStyleForm() {
+    document.getElementById("website").style.display = "none";
+}
+

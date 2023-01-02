@@ -59,9 +59,6 @@ body {
     opacity: 0.82;
 }
 
-
-
-
 .close {
     position: absolute;
     top: 20px;
@@ -99,7 +96,7 @@ body {
     height: 10px;
     top: 0;
     left: 50%;
-   
+
     background-color: yellowgreen;
     box-shadow: 0 0 8px yellowgreen;
     animation: color 10s linear infinite;
@@ -148,10 +145,7 @@ body {
     border-right: 1px solid black;
     box-shadow: 0px 0px 70px black;
     background-color: black;
-    
 }
-
-
 
 /* barre de navigation */
 nav {
@@ -174,7 +168,7 @@ nav > ul {
     padding-top: 5px;
 }
 
-.burger  { 
+.burger {
     display: none;
 }
 
@@ -220,63 +214,74 @@ nav > ul > li:nth-child(5) {
     border-top-left-radius: 8px;
     background-color: transparent;
     position: relative;
-    transition: all .4s;
+    transition: all 0.4s;
     z-index: 2;
     overflow: hidden;
 }
 
-.btnCV::after  {
+.btnCV::after {
     content: "";
     position: absolute;
     height: 200px;
     width: 200px;
-    background: linear-gradient(120deg, rgb(255, 241, 104) 0%, rgb(214,32,32) 100%);
+    background: linear-gradient(
+        120deg,
+        rgb(255, 241, 104) 0%,
+        rgb(214, 32, 32) 100%
+    );
     top: -30px;
-    left:-30px;
-    z-index:-1;
-    
-    box-shadow: 0px -0px 0px 0px rgba(255, 241, 104, 0.5), 0px 0px 0px 0px rgba(214,32,32,0.5);
+    left: -30px;
+    z-index: -1;
+
+    box-shadow: 0px -0px 0px 0px rgba(255, 241, 104, 0.5),
+        0px 0px 0px 0px rgba(214, 32, 32, 0.5);
     transition: all 0.6s;
 }
 
-
-
 .btnCV:hover::after {
-      transform : rotate(240deg);
-      
+    transform: rotate(240deg);
 }
 
-.btnCV:hover  {
+.btnCV:hover {
     transform: translateY(2px);
-    box-shadow: 7px -7px 25px 0px rgba(255, 241, 104, 0.25), -7px 7px 25px 0px rgba(214,32,32,0.25);
+    box-shadow: 7px -7px 25px 0px rgba(255, 241, 104, 0.25),
+        -7px 7px 25px 0px rgba(214, 32, 32, 0.25);
 }
 
-
-.menuDeroul  {
+.menuDeroul {
     display: none;
 }
 
-
-
-
 h1 {
+    color: black;
     font-weight: bold;
-    color: rgb(221, 221, 104);
+    text-shadow: 0px 0px 9px rgb(255, 241, 104), 0px 0px 2px white;
     font-family: "Ubuntu", monospace;
     text-align: center;
     padding-top: 35px;
-    font-size: 2.6rem;
+    font-size: 3.5rem;
     text-decoration: underline;
 }
 /* section a propos de moi */
-
 section.aboutme {
-    background-color: #8eb2f6;
-    margin: 40px auto 140px 50px;
+    display: flex;
+    flex-direction: row;
+}
+.presentText {
+    background-color: rgb(196, 196, 196);
+    margin: 40px 30px 140px 90px;
     padding: 20px 60px 40px 60px;
-    border-radius: 3px;
-    width: 55%;
+    border-radius: 5px;
+    width: 60%;
     min-width: 440px;
+}
+
+.photo {
+    margin: 0 auto;
+}
+
+.maPhoto {
+    width: 330px;
 }
 
 .animation {
@@ -297,7 +302,7 @@ section.aboutme {
 }
 
 .aboutme li:nth-child(2) {
-    color: rgb(203, 15, 15);
+    color: rgb(95, 5, 5);
     text-shadow: 0 0 1px black;
 }
 
@@ -453,20 +458,20 @@ h3 a {
     font-size: 1rem;
 }
 
-
-.logos  {
+.logos {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.logos img, .langage img  {
-    margin:10px;
+.logos img,
+.langage img {
+    margin: 10px;
     height: 45px;
 }
 
- .lien {
-     font-family: "Oxygen";
+.lien {
+    font-family: "Oxygen";
     font-size: 1.6rem;
     font-weight: bold;
     text-align: center;
@@ -474,185 +479,260 @@ h3 a {
     padding: 10px;
 }
 
-.intro  {
+.intro {
     font-size: 1.1rem;
 }
 
+/* CSS du formulaire */
+
+.center_div {
+    color: black;
+    font-weight: bold;
+    text-shadow: 0px 0px 9px rgb(255, 241, 104), 0px 0px 2px white;
+    font-family: "Ubuntu", monospace;
+    text-align: center;
+    
+    font-size: 3.5rem;
+    text-decoration: underline;
+    margin:35px auto;
+}
+
+#mail form {
+    padding: 50px 5%;
+    border: 1px solid rgb(255, 241, 104);
+    box-shadow: 0px 0px 15px rgb(255, 241, 104);
+    border-radius: 5px;
+    width: 50%;
+    min-width: 500px;
+    height: 500px;
+    margin: 50px auto 40px auto;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+#mail input {
+    margin: 10px 0px 5px 20px;
+    width: 250px;
+    height: 40px;
+    border-radius: 15px;
+}
+#mail textarea {
+    margin: 20px;
+}
+
+#mail #subForm {
+    margin: auto;
+    width: 80px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#mail .error {
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+#mail .email_success {
+    color: green;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+footer {
+    height: 90px;
+    background-color: #153061;
+}
 
 /* version mobile */
 
-@media screen and ((max-width: 1605px) or (max-height: 920px))  {
-
+@media screen and ((max-width: 1605px) or (max-height: 920px)) {
     .openModal {
         display: none;
     }
 
-    .textPres  {
+    .textPres {
         position: relative;
         margin-top: 100px;
-        margin-bottom: 50px;;
-        
+        margin-bottom: 50px;
     }
 
-    .iframeContent  {
+    .iframeContent {
         position: relative;
     }
 
-    .iframeContainer  {
+    .iframeContainer {
         height: 75vh;
     }
 
-    .container  {
+    .container {
         border: 1px solid rgb(221, 221, 104);
     }
 
     .iframeContent:hover {
-    opacity: 1;
-    filter: brightness(100%);
-}
+        opacity: 1;
+        filter: brightness(100%);
+    }
 }
 
 @media screen and (max-width: 1300px) {
-   
-    body  {
+    body {
         width: 100vw;
-
     }
 
-        .fenetre  {
+    .fenetre {
         width: 100vw;
         box-shadow: none;
     }
-
-
-    
 }
 
 @media screen and (max-width: 1000px) {
-
-    nav>ul  {
+    nav > ul {
         margin-right: 0px;
         margin-left: 15px;
     }
 
     nav > ul > li:nth-child(2),
     nav > ul > li:nth-child(3),
-    nav > ul > li:nth-child(4)  {
-    display: none
-}
+    nav > ul > li:nth-child(4) {
+        display: none;
+    }
 
-nav > ul > li:nth-child(6)  {
-    margin-right: 30px;
-}
+    nav > ul > li:nth-child(6) {
+        margin-right: 30px;
+    }
 
-.burger  {
-    display: block;
-    height: 40px;
-    width: 40px;
-    background-color: white;
-    border-radius: 7px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .burger {
+        display: block;
+        height: 40px;
+        width: 40px;
+        background-color: white;
+        border-radius: 7px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.burger >span  {
+    .burger > span {
+        background-color: black;
+        height: 4px;
+        width: 25px;
+        border-radius: 8px;
+        position: relative;
+    }
 
-    background-color: black;
-   height: 4px;
-   width: 25px;
-   border-radius: 8px;
-   position: relative;
-}
+    .barre::after,
+    .barre::before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        display: block;
+        background-color: black;
+        height: 4px;
+        width: 25px;
+        border-radius: 8px;
+    }
 
-  .barre::after, .barre::before  {
-   content : "";
-   position: absolute;
-   left: 0px;
-   display: block;
-    background-color: black;
-    height: 4px;
-    width: 25px;
-    border-radius: 8px;
-  }
-
-    .barre::after  {
+    .barre::after {
         transform: translateY(8px);
-  }
-    .barre::before{
+    }
+    .barre::before {
         transform: translateY(-8px);
     }
 
-    .appnav .barre  {
-      width: 0px;
+    .appnav .barre {
+        width: 0px;
         transform: translateX(-12px);
     }
 
-    .appnav .barre::before  {
-         transform: rotate(45deg);
-         
+    .appnav .barre::before {
+        transform: rotate(45deg);
     }
 
-     .appnav .barre::after {    
-         transform: rotate(-45deg);
-         
+    .appnav .barre::after {
+        transform: rotate(-45deg);
     }
 
-    .container  {
+    .container {
         min-width: 0;
     }
 
+    .presentText {
+        margin: 40px auto 80px auto;
+        padding: 20px 40px 40px 40px;
+        width: 90%;
+        border-radius: 3px;
+        min-width: 0;
+    }
 
+    nav > ul > li:nth-child(5) {
+        display: none;
+    }
+
+    .menuDeroul {
+        position: absolute;
+        width: 100%;
+        display: block;
+        transform: translateY(-180px);
+        transition: all 0.5s;
+        top: 0px;
+        z-index: 1;
+    }
+
+    .menuDeroul.appnav2 {
+        transform: translateY(90px);
+        transition: all 0.5s;
+    }
+
+    .menuDeroul li {
+        list-style: none;
+        height: 80px;
+        text-align: center;
+        background-color: white;
+        border-top: 3px solid black;
+        line-height: 80px;
+        vertical-align: middle;
+        box-shadow: inset 0px 0px 35px #153061;
+    }
+
+    .menuDeroul a {
+        color: black;
+        font-size: 1.5rem;
+        text-decoration: none;
+        display: block;
+        height: 100%;
+    }
+
+    .container h3 {
+        width: 80%;
+        margin: auto;
+    }
+}
+@media screen and (max-width: 800px) {
     section.aboutme {
-    background-color: #8eb2f6;
-    margin: 40px auto 80px auto;
-    padding: 20px 40px 40px 40px;
-    width: 90%;
-    border-radius: 3px;
-    min-width: 0;
-}
-nav > ul > li:nth-child(5)  {
-    display: none;
-}
-
-.menuDeroul   {
-    position: absolute;
-    width: 100%;
-    display: block;
-    transform: translateY(-180px);
-    transition: all 0.5s;
-    top: 0px;
-    z-index: 1;
+        flex-direction: column;
+    }
+    .presentText {
+        margin: 40px auto 10px auto;
+    }
     
-}
+    #mail form {
+        min-width: 200px;
+        width: 90%; 
+        margin: 20px auto;  
+    }
+    #mail textarea {
+        width: 80%;
+        margin: 20px auto;
+    }
 
-.menuDeroul.appnav2  {
-    transform: translateY(90px);
-    transition: all 0.5s;
+    #mail input {
+        width:80%;
+        margin:0px auto;
+    }
 }
-
-.menuDeroul li  {
-    list-style: none;
-    height: 80px;
-    text-align: center;
-    background-color:white;
-    border-top: 3px solid black; 
-    line-height: 80px;
-    vertical-align: middle;
-    box-shadow: inset 0px 0px 35px #153061;
-}
-
-.menuDeroul a  {
-    color: black;
-    font-size: 1.5rem;
-    text-decoration: none;
-    display: block;
-    height: 100%;
-}
-
-.container h3  {
-    width:80%;
-    margin: auto;
-}
-}
-
