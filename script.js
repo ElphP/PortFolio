@@ -1,3 +1,5 @@
+
+
 // création d'une table de valeur aléatoire pour le delay entre lettres
 var tab = [];
 for (i = 0; i < 54; i++) {
@@ -61,144 +63,145 @@ function reset() {
 
 type();
 
-// Horloge
-var span = document.getElementsByClassName("sec");
+// Horloge   (retirée car la modale ne fonctionne pas avec IOS)
+// var span = document.getElementsByClassName("sec");
 
-setInterval(affichDH, 1000);
+// setInterval(affichDH, 1000);
 
-function affichDH() {
-    var d = new Date();
-    var date = "";
-    var heure = "";
-    switch (d.getDay()) {
-        case 0:
-            date = "Dimanche ";
-            break;
-        case 1:
-            date = "Lundi ";
-            break;
-        case 2:
-            date = "Mardi ";
-            break;
-        case 3:
-            date = "Mercredi ";
-            break;
-        case 4:
-            date = "Jeudi ";
-            break;
-        case 5:
-            date = "Vendredi ";
-            break;
-        case 6:
-            date = "Samedi ";
-            break;
-        default:
-            date = "Erreur ";
-            break;
-    }
+// function affichDH() {
+//     var d = new Date();
+//     var date = "";
+//     var heure = "";
+//     switch (d.getDay()) {
+//         case 0:
+//             date = "Dimanche ";
+//             break;
+//         case 1:
+//             date = "Lundi ";
+//             break;
+//         case 2:
+//             date = "Mardi ";
+//             break;
+//         case 3:
+//             date = "Mercredi ";
+//             break;
+//         case 4:
+//             date = "Jeudi ";
+//             break;
+//         case 5:
+//             date = "Vendredi ";
+//             break;
+//         case 6:
+//             date = "Samedi ";
+//             break;
+//         default:
+//             date = "Erreur ";
+//             break;
+//     }
 
-    date += d.getDate();
-    switch (d.getMonth()) {
-        case 0:
-            date += " janvier ";
-            break;
-        case 1:
-            date += " février ";
-            break;
-        case 2:
-            date += " mars ";
-            break;
-        case 3:
-            date += " avril ";
-            break;
-        case 4:
-            date += " mai ";
-            break;
-        case 5:
-            date += " juin ";
-            break;
-        case 6:
-            date += " juillet ";
-            break;
-        case 7:
-            date += " août ";
-            break;
-        case 8:
-            date += " septembre ";
-            break;
-        case 9:
-            date += " octobre ";
-            break;
-        case 10:
-            date += " novembre ";
-            break;
-        case 11:
-            date += " décembre ";
-            break;
-        default:
-            date += " Erreur ";
-            break;
-    }
+//     date += d.getDate();
+//     switch (d.getMonth()) {
+//         case 0:
+//             date += " janvier ";
+//             break;
+//         case 1:
+//             date += " février ";
+//             break;
+//         case 2:
+//             date += " mars ";
+//             break;
+//         case 3:
+//             date += " avril ";
+//             break;
+//         case 4:
+//             date += " mai ";
+//             break;
+//         case 5:
+//             date += " juin ";
+//             break;
+//         case 6:
+//             date += " juillet ";
+//             break;
+//         case 7:
+//             date += " août ";
+//             break;
+//         case 8:
+//             date += " septembre ";
+//             break;
+//         case 9:
+//             date += " octobre ";
+//             break;
+//         case 10:
+//             date += " novembre ";
+//             break;
+//         case 11:
+//             date += " décembre ";
+//             break;
+//         default:
+//             date += " Erreur ";
+//             break;
+//     }
 
-    date += d.getFullYear();
-    var h = d.getHours();
-    var m = d.getMinutes();
-    var s = d.getSeconds();
+//     date += d.getFullYear();
+//     var h = d.getHours();
+//     var m = d.getMinutes();
+//     var s = d.getSeconds();
 
-    // gestion des 0 de l'heure
+//     // gestion des 0 de l'heure
 
-    if (h < 10) {
-        h = "0" + h;
-    }
+//     if (h < 10) {
+//         h = "0" + h;
+//     }
 
-    if (m < 10) {
-        m = "0" + m;
-    }
-    if (s < 10) {
-        s = "0" + s;
-    }
-    heure = h + " : " + m + " : " + s;
-    document.getElementById("date").innerHTML = date;
-    document.getElementById("heure").innerHTML = heure;
+//     if (m < 10) {
+//         m = "0" + m;
+//     }
+//     if (s < 10) {
+//         s = "0" + s;
+//     }
+//     heure = h + " : " + m + " : " + s;
+//     document.getElementById("date").innerHTML = date;
+//     document.getElementById("heure").innerHTML = heure;
 
-    //    gestion des petits carrés lumineux
+//     //    gestion des petits carrés lumineux
 
-    if (s == 1) {
-        for (j = 0; j < 60; j++) {
-            span[j].style.visibility = "hidden";
-        }
-        span[s - 1].style.visibility = "visible";
-    } else if (s == 0) {
-        span[59].style.visibility = " visible";
-    } else {
-        span[s - 1].style.visibility = "visible";
-    }
-}
+//     if (s == 1) {
+//         for (j = 0; j < 60; j++) {
+//             span[j].style.visibility = "hidden";
+//         }
+//         span[s - 1].style.visibility = "visible";
+//     } else if (s == 0) {
+//         span[59].style.visibility = " visible";
+//     } else {
+//         span[s - 1].style.visibility = "visible";
+//     }
+// }
 
-// fenetre modale dialog
+// fenetre modale dialog, TODO ne fonctionne pas sur IOS ....à corriger 
 
-const openModal= document.querySelector(".openModal");
-const closeModal= document.querySelector(".closeModal");
-const modal= document.getElementById('modal');
+// const openModal = document.querySelector(".openModal");
+// const closeModal = document.querySelector(".closeModal");
+// const modal = document.getElementById("modal");
 
 
-openModal.addEventListener('click', () => {
-    modal.showModal();  
-})
-closeModal.addEventListener('click', ()=> {
-    modal.close();
-})
+
+// openModal.addEventListener("click", () => {
+//     modal.showModal();
+// });
+// closeModal.addEventListener("click", () => {
+//     modal.close();
+// });
 
 //toggle menu burger
 
 function ToggleMenu() {
     const burger = document.querySelector(".burger");
     const nav_mobile = document.querySelector(".menuDeroul");
-    
-     burger.addEventListener("click", () => {
-         burger.classList.toggle("appnav");
-     });
-    
+
+    burger.addEventListener("click", () => {
+        burger.classList.toggle("appnav");
+    });
+
     burger.addEventListener("click", () => {
         nav_mobile.classList.toggle("appnav2");
     });
@@ -208,4 +211,3 @@ ToggleMenu();
 function changeStyleForm() {
     document.getElementById("website").style.display = "none";
 }
-

@@ -1,4 +1,5 @@
-<?php include("form_php.php");?>
+<?php include("form_php.php");
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,12 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Elphège Proisy - Développeur Web</title>
 
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Magra&family=Oxygen&display=swap"
-            rel="stylesheet"
-        /> -->
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,12 +21,14 @@
 </head>
 
 <body onload="changeStyleForm()">
-    <button class="openModal">
+
+    <!-- icone horloge   (supprimée car ne fonctionne pas sous IOS,... à corriger) -->
+    <!-- <button class="openModal">
         <img src="horl.png" alt="Bouton horloge" class="iconHorl" />
-    </button>
+    </button> -->
 
     <!-- fenêtre modale -->
-    <dialog id="modal">
+    <!-- <dialog id="modal">
         <div class="closeModal">
             <img src="close-icon-16.png" alt="fermer" class="close" />
         </div>
@@ -101,7 +99,7 @@
             <div id="date"></div>
             <div id="heure"></div>
         </div>
-    </dialog>
+    </dialog> -->
     <!-- fin modale -->
 
     <div class="fenetre">
@@ -113,6 +111,7 @@
                 <li>
                     <a class="navbar" href="#realis">Mes réalisations</a>
                 </li>
+
                 <li><a class="navbar" href="#mail">Me contacter</a></li>
 
                 <li><a class="btnCV" href="monCV.pdf" target="about_blank">mon CV</CV></a></li>
@@ -123,6 +122,10 @@
         </nav>
         <ul class="menuDeroul">
             <li class="onglet"><a href="#realis">Mes réalisations</a></li>
+            <li class="site"><a href="#realis">Site Enea telecom</a></li>
+            <li class="site"><a href="#ep">Site elphegeproisy.com</a></li>
+            <li class="site"><a href="#fictif">Site pâtisserie FICTIF</a></li>
+            <li class="site"><a href="#multipli">Jeu des multiplications</a></li>
             <li class="onglet">
                 <a href="#mail">Me contacter</a>
             </li>
@@ -141,15 +144,17 @@
                         </div>
 
                         <h2>A propos de moi,</h2>
+
                         <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing
-                            elit. Voluptas, itaque delectus maxime eos ipsa
-                            nobis non maiores qui, veniam corporis quisquam
-                            sapiente reiciendis? A maxime, molestiae, nihil,
-                            suscipit sed ullam impedit illo reiciendis
-                            consectetur voluptatem nisi eius possimus quod
-                            necessitatibus error enim ex ipsam. Sit nulla modi
-                            dolores suscipit pariatur!
+                            Après plus de 20 ans d'une carrière de musicien d'orchestre et de professeur de musique,
+                            j'ai
+                            décidé de me lancer dans une nouvelle aventure en me reconvertissant dans le développement
+                            web. Mon esprit analytique, ma persévérance et mon autonomie sont des qualités qui me seront
+                            certainement utiles dans mon futur métier de développeur web. Je suis impatient de voir ce
+                            que j'accomplirai
+                            dans ce nouvel univers, et j'espère que ma passion et mon talent me mèneront
+                            loin dans ce nouveau chapitre de ma vie!
+
                         </p>
                     </div>
                 </div>
@@ -215,7 +220,7 @@
                     </div>
                 </div>
 
-                <div class="container">
+                <div class="container" id="ep">
                     <div class="iframeContainer">
                         <h3>
                             <a href="https://www.elphegeproisy.com" target="_blank" rel="noopener noreferrer">Site
@@ -233,7 +238,7 @@
                     </div>
                 </div>
 
-                <div class="container">
+                <div class="container" id="fictif">
                     <div class="iframeContainer">
                         <h3>
                             <a href="https://betadev.elphegeproisy.com/RP1/index.php" target="_blank"
@@ -250,8 +255,8 @@
                             (Toutes les pages ne sont pas programmées)
                         </p>
                         <p>
-                            Codes d'accès programmés pour test:
-                            "AMELIE-c18A2ePt" & "LAURENT-n2Felg83"
+                            2 codes d'accès programmés (test):
+                            Id1: AMELIE mdp: c18A2ePt / Id2: LAURENT mdp: n2Felg83
                         </p>
 
                         <div class="langage">
@@ -270,9 +275,10 @@
                             <ul>
                                 <li>
                                     - Gestion d'un accueil avec mot de passe
-                                    (Accès restreint pré-programmés dans la
-                                    base de données). Une interface d'administration a, par ailleurs, été développée
-                                    (non visible ici) pour rajouter des "adhérents" dans la base de donnée.
+                                    (Accès restreints pré-programmés dans la
+                                    base de données).<br />
+                                    Une interface d'administration a, par ailleurs, été développée
+                                    (non visible ici) pour rajouter des "adhérents" dans la base de données.
                                 </li>
                             </ul>
                             <br />
@@ -309,8 +315,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
-                    <div class="iframeContainer">
+                <div class="container" id="multipli">
+                    <div class=" iframeContainer">
                         <h3>
                             <a href="" target="_blank" rel="noopener noreferrer">Test des tables de multiplications</a>
                         </h3>
@@ -320,7 +326,7 @@
                     </div>
                     <div class="textPres">
                         <p class="intro">
-                            J'ai crée ce petit programme à l'aide de
+                            J'ai créé ce petit programme à l'aide de
                             Javascript pour essayer de
                         </p>
                         <p>
@@ -361,7 +367,7 @@
                 <div id="mail">
                     <div class="center_div">Me contacter</div>
 
-                    <form action="<?php echo htmlentities($_SERVER['PHP_SELF']) ?>" method="POST">
+                    <form action="index.php#mail" method="POST">
                         <span class="<?php echo $color_mess ?>"><?php echo $mess_ok ?></span>
                         <input type="text" name="nom" id="nom" placeholder="Votre nom" value="<?php echo $name ?>" />
                         <span class="error"><?php echo $name_error ?></span>
@@ -384,7 +390,14 @@
             </section>
 
             <footer>
-
+                <div class="footer1">
+                    <ul>
+                        <li class="footerli"><a href="index.php">A propos de moi</a></li>
+                        <li class="footerli"><a href="#realis">Mes réalisations</a></li>
+                        <li class="footerli"><a href="#mail">Me contacter</a></li>
+                    </ul>
+                </div>
+                <div class="footer2">© Copyright 2023 By L-FÈJ-P </div>
             </footer>
         </main>
     </div>

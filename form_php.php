@@ -49,6 +49,7 @@
 
             if(empty($_POST["mess"])) {
                 $mess_error="Quel est votre message? Ce champ est requis.";
+                
             }
             else  {
                 $message = sanit($_POST["mess"]);
@@ -57,22 +58,13 @@
             if($name_error == "" and $mail_error == "" and $mess_error == "")  {
                 unset($_POST["submit"]);
                 $mailTo = "contact@elphegeproisy.com";
-                $subject = "Message de mon PorteFolio";
-                $contenu =  "Ce message a été envoyé automatiquement depuis le formulaire.\n\n Contact : ".$name.
+                $subject = "Message de mon Portefolio";
+                $contenu =  "Ce message a été automatiquement envoyé depuis le formulaire de mon portefolio.\n\n Contact : ".$name.
                 "\n Adresse e-mail: ".$mail. "\n Objet du message: ".$objet. "\n\n" .$message. "\n"; 
                 
                 if(mail($mailTo,$subject,$contenu))  { 
                 $color_mess ="email_success";
-                $mess_ok = "Votre message a bien été envoyé,\n nous vous envoyons un mail de confirmation à l'adresse que vous nous avez indiquée.";
-                
-                $retourClient = "Bonjour, nous avons bien reçu votre message, nous allons le traiter dans les plus brefs délais. \n\n
-                
-                Bien cordialement,\n 
-                Elphège PROISY \n\n 
-                
-                Ceci est un message automatique, merci de ne pas répondre à ce message.";
-                
-                mail($mail,$subject,$retourClient);
+                $mess_ok = "Votre message a bien été envoyé!";
                 $name = $mail = $objet = $message = "";
                 }
                 else  {
